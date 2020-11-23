@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <article>
+        <h2>{{ article.getName }}</h2>
+        <div class="metadata"> creer le {{ article.getCreated | date('d/m/Y')}} </div>
+        <div class="content">
+            <img src="http://placehold.it/350x150" alt="">
+            {{ article.getDescription | raw }}
+        </div>
+    </article>
+{% endblock %}

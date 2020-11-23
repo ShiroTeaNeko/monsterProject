@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+  {{ include('article/affiche.html.twig', { article: article }) }}
+{% endblock %}
