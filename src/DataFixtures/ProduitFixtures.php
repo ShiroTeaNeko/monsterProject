@@ -10,10 +10,12 @@ class ProduitFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
+        $faker = Faker\Factory::create();
+        
         for($i = 1; $i <= 20; $i++){
             $produit = new Produit();
-            $produit->setName("Nom du produit n°$i")
-                    ->setDescription("<p>Contenu du produit n°$i </p>")
+            $produit->setName($faker->sentence(7))
+                    ->setDescription($faker->paragraph(24))
                     ->setPromo(1)
                     ->setDisplay(1)
                     ->setPriceHT(10.0)
